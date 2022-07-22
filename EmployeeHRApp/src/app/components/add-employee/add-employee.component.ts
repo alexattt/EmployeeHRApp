@@ -18,13 +18,6 @@ export class AddEmployeeComponent implements OnInit {
   constructor(private employeesService: EmployeesService, private router: Router) { }
 
   ngOnInit(): void {
-    //this.createFormControls();
-    //this.createForm();
-    //this.employeeForm = new FormGroup({
-    //  fNameImp: new FormControl(''),
-    //  lastName: new FormControl(''),
-    //  ssn: new FormControl(''),
-    //});
   }
 
   createEmployee(): void {
@@ -55,21 +48,5 @@ export class AddEmployeeComponent implements OnInit {
       (error) => {
         console.log("err", error);
       });
-  }
-
-  //createFormControls() {
-  //  this.firstName = new FormControl('', Validators.required);
-  //  this.lastName = new FormControl('', Validators.required);
-  //  this.ssn = new FormControl('', Validators.required);
-  //}
-
-  //createForm() {
-  //  this.employeeForm = new FormGroup({
-  //    name: new FormGroup({
-  //      firstName: this.firstName,
-  //      lastName: this.lastName,
-  //    }),
-  //    ssn: this.ssn,
-  //  });
-  //}
+  };
 }
