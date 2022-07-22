@@ -1,0 +1,35 @@
+<div class="container add-emp-container">
+
+  <h2>New employee form</h2>
+
+  <form class="add-form">
+    <mat-form-field appearance="legacy">
+      <mat-label>First Name</mat-label>
+      <input matInput type="text" required name="firstName" [(ngModel)]="firstName" id="firstName" placeholder="First Name">
+      <!--<div *ngIf="fNameImp.invalid && (fNameImp.dirty || fNameImp.touched)" class="alert">
+      <div *ngIf="fNameImp.errors?.['required']">
+        Name is required.
+      </div>
+    </div>-->
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Last Name</mat-label>
+      <input matInput type="text" required name="lastName" [(ngModel)]="lastName" id="lastName" placeholder="Last Name">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>SSN</mat-label>
+      <input matInput type="text" required name="ssn" [(ngModel)]="ssn" id="ssn" placeholder="123456789000">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Phone Number</mat-label>
+      <input matInput type="text" name="phoneNumber" [(ngModel)]="phoneNumber" id="phoneNumber" placeholder="22222333">
+    </mat-form-field>
+
+    <!--<button mat-flat-button color="basic" (click)="createEmployee()">Add New Employee</button>-->
+    <div class="btn-container">
+      <button mat-stroked-button color="basic" [routerLink]="'/employees'">Return</button>
+      <button mat-flat-button color="accent" (click)="createEmployee()">Add New Employee</button>
+    </div>
+  </form>
+
+</div>
